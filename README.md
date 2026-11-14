@@ -79,4 +79,4 @@ A pasta `verificacao` reproduz a verificação descrita no relatório-piloto. O 
 
 ## Autoria
 
-Daniela Correia Batista (autora) e Prof. Dr. Edson Melo de Souza (orientador), Programa de Pós-Graduação em Gestão de Projetos, Universidade Nove de Julho, 2026.
+Daniela Correia Batista (mestranda/autora), Prof. Dr. Edson Melo de Souza (orientador) e Profa. Dra. Cristina Dai Prá Martens, Programa de Pós-Graduação em Gestão de Projetos, Universidade Nove de Julho - Uninove, 2026.
