@@ -1,0 +1,294 @@
+[
+ {
+  "cenario": "A: IA ideal (acurácia 100%, sem falhas), 3.000 tentativas",
+  "tentativas": 3000,
+  "aceitos": 2740,
+  "rejeitados": 260,
+  "incompletos": 303,
+  "incompletos_bloqueados": 260,
+  "incompletos_aceitos": 43,
+  "por_campo": {
+   "usuario": [
+    43,
+    0
+   ],
+   "gerador": [
+    32,
+    32
+   ],
+   "unidade": [
+    43,
+    43
+   ],
+   "tipoResiduo": [
+    50,
+    50
+   ],
+   "placa": [
+    42,
+    42
+   ],
+   "peso": [
+    47,
+    47
+   ],
+   "transportador": [
+    46,
+    46
+   ]
+  },
+  "com_evidencia": 2740,
+  "protocolos_distintos": 2737,
+  "colisoes": 3,
+  "colisoes_esperadas_teoria": 4.17,
+  "rastreio_correto": 2737,
+  "rastreio_pct": 99.89,
+  "csv": 2747,
+  "csv_quebradas": 1,
+  "json": 2747,
+  "hist": 2747,
+  "pdf_ok": true,
+  "pdf_bytes": 9401,
+  "conf_gabarito": 79.3,
+  "conf_kpi_sistema": 79.4,
+  "nc_gabarito": 566,
+  "nc_detectadas": 566,
+  "nc_nao_detectadas": 0,
+  "nc_perdidas_por_falha_ia": 0,
+  "falhas_ia": 0,
+  "alertas": 100,
+  "lat_med": 8.7,
+  "lat_p95": 13.6,
+  "lat_primeiro_decil": 5.0,
+  "lat_ultimo_decil": 12.6,
+  "adversariais": [
+   {
+    "caso": "peso_negativo",
+    "status": 200
+   },
+   {
+    "caso": "peso_zero",
+    "status": 200
+   },
+   {
+    "caso": "tipo_fora_taxonomia",
+    "status": 200
+   },
+   {
+    "caso": "placa_nao_homologada",
+    "status": 200
+   },
+   {
+    "caso": "transportador_nao_cadastrado",
+    "status": 200
+   },
+   {
+    "caso": "gerador_nao_cadastrado",
+    "status": 200
+   },
+   {
+    "caso": "operador_inexistente",
+    "status": 200
+   },
+   {
+    "caso": "sem_evidencia_fotografica",
+    "status": 422
+   }
+  ],
+  "acesso": {
+   "criar_admin_sem_login": 201,
+   "listar_usuarios_sem_login": 200,
+   "historico_completo_sem_login": 200,
+   "resolver_alerta_sem_login": 200,
+   "login_padrao_admin123": 200
+  },
+  "reincidencia": {
+   "T3": {
+    "n": 944,
+    "nc": 316,
+    "bad": true
+   },
+   "T2": {
+    "n": 904,
+    "nc": 121,
+    "bad": false
+   },
+   "T1": {
+    "n": 898,
+    "nc": 130,
+    "bad": false
+   },
+   "G1": {
+    "n": 573,
+    "nc": 193,
+    "bad": true
+   },
+   "G3": {
+    "n": 575,
+    "nc": 97,
+    "bad": false
+   },
+   "G4": {
+    "n": 535,
+    "nc": 105,
+    "bad": false
+   },
+   "G5": {
+    "n": 534,
+    "nc": 76,
+    "bad": false
+   },
+   "G2": {
+    "n": 529,
+    "nc": 96,
+    "bad": false
+   }
+  }
+ },
+ {
+  "cenario": "B: IA com acurácia 90% e 20% de falhas, 1.000 tentativas",
+  "tentativas": 1000,
+  "aceitos": 920,
+  "rejeitados": 80,
+  "incompletos": 93,
+  "incompletos_bloqueados": 80,
+  "incompletos_aceitos": 13,
+  "por_campo": {
+   "usuario": [
+    13,
+    0
+   ],
+   "tipoResiduo": [
+    19,
+    19
+   ],
+   "transportador": [
+    16,
+    16
+   ],
+   "peso": [
+    14,
+    14
+   ],
+   "placa": [
+    7,
+    7
+   ],
+   "gerador": [
+    8,
+    8
+   ],
+   "unidade": [
+    16,
+    16
+   ]
+  },
+  "com_evidencia": 920,
+  "protocolos_distintos": 919,
+  "colisoes": 1,
+  "colisoes_esperadas_teoria": 0.47,
+  "rastreio_correto": 919,
+  "rastreio_pct": 99.89,
+  "csv": 927,
+  "csv_quebradas": 1,
+  "json": 927,
+  "hist": 927,
+  "pdf_ok": true,
+  "pdf_bytes": 9472,
+  "conf_gabarito": 80.9,
+  "conf_kpi_sistema": 80.9,
+  "nc_gabarito": 176,
+  "nc_detectadas": 114,
+  "nc_nao_detectadas": 62,
+  "nc_perdidas_por_falha_ia": 45,
+  "falhas_ia": 202,
+  "alertas": 100,
+  "lat_med": 5.6,
+  "lat_p95": 8.5,
+  "lat_primeiro_decil": 4.3,
+  "lat_ultimo_decil": 6.4,
+  "adversariais": [
+   {
+    "caso": "peso_negativo",
+    "status": 200
+   },
+   {
+    "caso": "peso_zero",
+    "status": 200
+   },
+   {
+    "caso": "tipo_fora_taxonomia",
+    "status": 200
+   },
+   {
+    "caso": "placa_nao_homologada",
+    "status": 200
+   },
+   {
+    "caso": "transportador_nao_cadastrado",
+    "status": 200
+   },
+   {
+    "caso": "gerador_nao_cadastrado",
+    "status": 200
+   },
+   {
+    "caso": "operador_inexistente",
+    "status": 200
+   },
+   {
+    "caso": "sem_evidencia_fotografica",
+    "status": 422
+   }
+  ],
+  "acesso": {
+   "criar_admin_sem_login": 201,
+   "listar_usuarios_sem_login": 200,
+   "historico_completo_sem_login": 200,
+   "resolver_alerta_sem_login": 200,
+   "login_padrao_admin123": 200
+  },
+  "reincidencia": {
+   "T3": {
+    "n": 326,
+    "nc": 86,
+    "bad": true
+   },
+   "T2": {
+    "n": 297,
+    "nc": 44,
+    "bad": false
+   },
+   "T1": {
+    "n": 303,
+    "nc": 46,
+    "bad": false
+   },
+   "G1": {
+    "n": 171,
+    "nc": 38,
+    "bad": true
+   },
+   "G3": {
+    "n": 176,
+    "nc": 32,
+    "bad": false
+   },
+   "G4": {
+    "n": 192,
+    "nc": 39,
+    "bad": false
+   },
+   "G5": {
+    "n": 201,
+    "nc": 27,
+    "bad": false
+   },
+   "G2": {
+    "n": 186,
+    "nc": 41,
+    "bad": false
+   }
+  }
+ }
+]

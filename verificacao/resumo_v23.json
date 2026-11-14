@@ -1,0 +1,240 @@
+{
+ "A": {
+  "tent": 3000,
+  "aceitos": 2687,
+  "incompletos": 313,
+  "incompletos_bloqueados": 313,
+  "protocolos_distintos": 2687,
+  "colisoes": 0,
+  "rastreio": 2687,
+  "csv": 2688,
+  "csv_cols": 13,
+  "csv_quebradas": 0,
+  "csv_escape_status": 200,
+  "json": 2688,
+  "hist": 2688,
+  "pdf": true,
+  "kpi": 80.1,
+  "kpi_analis": 2688,
+  "kpi_pend": 0,
+  "gt_conf_analisadas": 80.1,
+  "nc_gt": 536,
+  "nc_det": 536,
+  "nc_em_pendentes": 0,
+  "pendentes": 0,
+  "fp": 0,
+  "tempo_medio_kpi": 139.5,
+  "cronometrados": 2687,
+  "tempo_medio_gt": 139.5,
+  "erro_tempo_max_s": 0.0,
+  "alertas_total": 739,
+  "alertas_listados": 739,
+  "adversariais": [
+   {
+    "caso": "transportador_com_separador",
+    "status": 422
+   },
+   {
+    "caso": "peso_negativo",
+    "status": 422
+   },
+   {
+    "caso": "peso_zero",
+    "status": 422
+   },
+   {
+    "caso": "tipo_fora_taxonomia",
+    "status": 422
+   },
+   {
+    "caso": "placa_nao_homologada",
+    "status": 422
+   },
+   {
+    "caso": "transportador_nao_cadastrado",
+    "status": 422
+   },
+   {
+    "caso": "gerador_nao_cadastrado",
+    "status": 422
+   },
+   {
+    "caso": "operador_inexistente",
+    "status": 422
+   },
+   {
+    "caso": "sem_evidencia_fotografica",
+    "status": 422
+   }
+  ],
+  "acesso": {
+   "criar_admin_sem_login": 201,
+   "listar_usuarios_sem_login": 200,
+   "historico_completo_sem_login": 200,
+   "resolver_alerta_sem_login": 200,
+   "login_padrao_admin123": 200
+  },
+  "lat_med": 9.7,
+  "reinc": {
+   "T3": {
+    "n": 905,
+    "nc": 300,
+    "bad": true
+   },
+   "T2": {
+    "n": 891,
+    "nc": 120,
+    "bad": false
+   },
+   "T1": {
+    "n": 891,
+    "nc": 116,
+    "bad": false
+   },
+   "G1": {
+    "n": 523,
+    "nc": 169,
+    "bad": true
+   },
+   "G3": {
+    "n": 525,
+    "nc": 82,
+    "bad": false
+   },
+   "G4": {
+    "n": 542,
+    "nc": 98,
+    "bad": false
+   },
+   "G5": {
+    "n": 514,
+    "nc": 86,
+    "bad": false
+   },
+   "G2": {
+    "n": 584,
+    "nc": 101,
+    "bad": false
+   }
+  }
+ },
+ "B": {
+  "tent": 1000,
+  "aceitos": 906,
+  "incompletos": 94,
+  "incompletos_bloqueados": 94,
+  "protocolos_distintos": 906,
+  "colisoes": 0,
+  "rastreio": 906,
+  "csv": 907,
+  "csv_cols": 13,
+  "csv_quebradas": 0,
+  "csv_escape_status": 200,
+  "json": 907,
+  "hist": 907,
+  "pdf": true,
+  "kpi": 72.5,
+  "kpi_analis": 709,
+  "kpi_pend": 198,
+  "gt_conf_analisadas": 78.1,
+  "nc_gt": 199,
+  "nc_det": 137,
+  "nc_em_pendentes": 44,
+  "pendentes": 198,
+  "fp": 58,
+  "tempo_medio_kpi": 139.4,
+  "cronometrados": 906,
+  "tempo_medio_gt": 139.4,
+  "erro_tempo_max_s": 0.0,
+  "alertas_total": 438,
+  "alertas_listados": 438,
+  "adversariais": [
+   {
+    "caso": "transportador_com_separador",
+    "status": 422
+   },
+   {
+    "caso": "peso_negativo",
+    "status": 422
+   },
+   {
+    "caso": "peso_zero",
+    "status": 422
+   },
+   {
+    "caso": "tipo_fora_taxonomia",
+    "status": 422
+   },
+   {
+    "caso": "placa_nao_homologada",
+    "status": 422
+   },
+   {
+    "caso": "transportador_nao_cadastrado",
+    "status": 422
+   },
+   {
+    "caso": "gerador_nao_cadastrado",
+    "status": 422
+   },
+   {
+    "caso": "operador_inexistente",
+    "status": 422
+   },
+   {
+    "caso": "sem_evidencia_fotografica",
+    "status": 422
+   }
+  ],
+  "acesso": {
+   "criar_admin_sem_login": 201,
+   "listar_usuarios_sem_login": 200,
+   "historico_completo_sem_login": 200,
+   "resolver_alerta_sem_login": 200,
+   "login_padrao_admin123": 200
+  },
+  "lat_med": 6.0,
+  "reinc": {
+   "T3": {
+    "n": 316,
+    "nc": 102,
+    "bad": true
+   },
+   "T2": {
+    "n": 307,
+    "nc": 48,
+    "bad": false
+   },
+   "T1": {
+    "n": 283,
+    "nc": 45,
+    "bad": false
+   },
+   "G1": {
+    "n": 172,
+    "nc": 50,
+    "bad": true
+   },
+   "G3": {
+    "n": 193,
+    "nc": 45,
+    "bad": false
+   },
+   "G4": {
+    "n": 187,
+    "nc": 36,
+    "bad": false
+   },
+   "G5": {
+    "n": 183,
+    "nc": 33,
+    "bad": false
+   },
+   "G2": {
+    "n": 172,
+    "nc": 31,
+    "bad": false
+   }
+  }
+ }
+}

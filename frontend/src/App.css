@@ -1,0 +1,736 @@
+/* --- RESET E VARIÁVEIS --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #3182ce;
+  --primary-dark: #2c5282;
+  --success: #48bb78;
+  --danger: #f56565;
+  --bg-body: #f7fafc;
+  --bg-card: #ffffff;
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --border: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.App {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- TELA DE LOGIN --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.login-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  margin: 20px 0;
+  outline: none;
+}
+
+/* --- NAVEGAÇÃO --- */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: var(--bg-card);
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.nav-menu button {
+  flex: 0 1 auto;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-menu button.active {
+  background: #ebf8ff;
+  color: var(--primary);
+}
+
+.btn-logout {
+  color: var(--danger) !important;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-menu button {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  .btn-logout {
+    margin-left: 0;
+  }
+}
+
+/* --- FORMULÁRIO DE CHECK-IN (GRID) --- */
+.checkin-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+  .checkin-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .full-width {
+    grid-column: span 2;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o ícone e o texto ao centro */
+    gap: 8px;            /* Espaço entre o ícone e a palavra 'Operador' */
+    margin-bottom: 8px;  /* Distância entre o label e o select/input */
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.input-group label svg {
+    flex-shrink: 0;      /* Impede que o ícone diminua se o texto for longo */
+    color: var(--primary); /* Mantém a cor padrão dos seus ícones */
+}
+
+.input-group select, .input-group textarea {
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+
+/* Ajuste para que inputs, selects e textareas tenham o mesmo visual */
+.input-group select, 
+.input-group textarea, 
+.input-group input {
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f8fafc;
+  width: 100%; /* Garante que ocupem todo o espaço da coluna do grid */
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Define uma altura padrão para campos de linha única (select e input) */
+.input-group select, 
+.input-group input {
+  height: 48px; 
+}
+
+/* Efeito de foco para o input de peso também */
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--primary);
+}
+/* --- CÂMERA E PREVIEW --- */
+.camera-container {
+  border: 2px dashed var(--border);
+  padding: 25px;
+  border-radius: 15px;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-camera {
+  padding: 15px 25px;
+  background: #edf2f7;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-camera.foto-ok { background: #c6f6d5; color: #22543d; }
+
+.btn-submit {
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-submit:disabled { background: #cbd5e0; cursor: not-allowed; }
+
+/* --- AUDITORIA EM CARDS --- */
+.historico-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-auditoria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-download {
+  text-decoration: none;
+  background: var(--primary-dark);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auditoria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .auditoria-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card-auditoria {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.data-tag { font-size: 0.75rem; color: var(--text-muted); }
+
+.card-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.info-item label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.info-item span { font-size: 0.9rem; font-weight: 600; }
+
+.ia-badge {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.ia-badge label { font-weight: 800; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 5px; display: block; }
+
+.ia-badge.good { background: #f0fff4; color: #22543d; border-left: 4px solid var(--success); }
+.ia-badge.bad { background: #fff5f5; color: #822727; border-left: 4px solid var(--danger); }
+
+/* --- PROTOCOLO PDF --- */
+.protocolo-pdf-box {
+  background: white;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.pdf-header { text-align: center; margin-bottom: 30px; }
+.pdf-body { display: flex; flex-direction: column; gap: 10px; }
+.pdf-section { background: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 10px; }
+.pdf-footer-qr { text-align: center; margin-top: 30px; }
+
+.btn-pdf {
+  background: #2d3748;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Layout da Grid de informações no PDF */
+.pdf-grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 10px 20px; /* Espaçamento entre linhas e colunas */
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.pdf-grid-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0; /* Linha sutil para separar itens */
+  padding-bottom: 4px;
+}
+
+.pdf-section.ia-box {
+  grid-column: 1 / -1; /* Garante que a caixa de IA ocupe a largura total */
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.pdf-footer-qr {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.acoes-pos-envio {
+  display: flex;
+  gap: 15px; /* Espaço entre os botões */
+  margin-top: 5px;
+  width: 100%;
+}
+
+.acoes-pos-envio button {
+  flex: 1; /* Faz os dois botões terem o mesmo tamanho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-pdf {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+}
+
+.btn-reset {
+  background-color: #edf2f7;
+  color: #2d3748;
+  border: 2px solid #cbd5e0;
+}
+
+.acoes-pos-envio button:hover {
+  opacity: 0.9;
+}
+
+.mvp-badge {
+  background: #edf2f7;
+  border-left: 4px solid #3182ce;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.mvp-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.badge-tag {
+  background: #3182ce;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.mvp-info p {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Garante que no grid do formulário ele ocupe a linha toda */
+@media (min-width: 768px) {
+  .mvp-badge {
+    grid-column: span 2;
+  }
+}
+
+.gate-mvp-header {
+  background: #ffffff;
+  border-left: 5px solid #3182ce;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+
+.gate-mvp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gate-mvp-badge {
+  display: inline-block;
+  width: fit-content;
+  background: #ebf8ff;
+  color: #3182ce;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.gate-mvp-content p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.gate-mvp-content strong {
+  color: #2d3748;
+}
+
+.gate-explanation-card {
+  background: #ffffff;
+  border-top: 5px solid #3182ce;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.gate-header-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.gate-explanation-card {
+  background: #ffffff;
+  border-top: 5px solid #3182ce;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  /* Centraliza o card e o texto dentro dele */
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gate-header-top {
+  display: flex;
+  flex-direction: column; /* Empilha a tag e o título para melhor centralização */
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.gate-status-tag {
+  /* Removido text-align-last pois não é necessário aqui */
+  background: #3182ce;
+  color: white;
+  font-size: 1.25rem;
+  /* font-weight: 800; */
+  padding: 6px 15px; /* Aumentado levemente para equilíbrio visual */
+  border-radius: 10px;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  display: inline-block;
+
+}
+
+.gate-description p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 900px; /* Evita que o texto fique muito largo e difícil de ler */
+}
+
+.gate-explanation-card h3 {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.gate-description p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gate-description strong {
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.card-obs {
+  margin-top: 0px;
+  padding-top: 10px;
+  border-top: 1px solid #edf2f7;
+  grid-column: span 2; /* Garante que a obs ocupe a largura total do card */
+}
+
+.card-obs p {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin: 5px 0 0 0;
+  /* O pulo do gato para quebra de linha e não quebrar o grid */
+  white-space: pre-line; 
+  word-break: break-word; 
+  line-height: 1.4;
+}
+
+.card-obs label {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  /* border-top: 1px solid #edf2f7; */
+  grid-column: span 2; /* Garante que a obs ocupe a largura total do card */
+}
+
+.filtro-relatorio {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtro-relatorio label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.select-relatorio {
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f8fafc;
+    height: 48px;
+    outline: none;
+}
+
+.select-relatorio:focus {
+    border-color: var(--primary);
+}
+
+/* Botão Ver Foto */
+.btn-ver-foto {
+  margin-top: 10px;
+  background-color: #f8fafc;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-ver-foto:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Modal de Foto */
+.modal-foto {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-conteudo {
+  position: relative;
+  width: 100%; /* Garante que o contêiner use a largura da tela como base */
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo img {
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: block; /* Remove espaços extras na base da imagem */
+}
+
+.btn-fechar-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.thumb-container {
+    margin-top: 15px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.img-thumb {
+    width: 75%; /* Ajustado para 75% conforme solicitado */
+    height: auto; 
+    max-height: 280px; /* Limite menor para evitar o alongamento excessivo */
+    object-fit: contain; /* Mantém a integridade da foto sem cortes */
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.img-thumb:hover {
+    transform: scale(1.02);
+}
+
+.api-docs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .api-docs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.api-docs-grid code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+/* [v2.3.0] Análise por IA pendente (falha ou indisponibilidade da IA) */
+.ia-badge.pending { background: #fffaf0; color: #7b341e; border-left: 4px solid #dd6b20; }

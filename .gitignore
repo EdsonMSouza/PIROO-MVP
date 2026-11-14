@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+
+# Credenciais e configuração local
+.env
+.env.*
+!.env.example
+
+# Dados de execução (gerados pelo servidor)
+backend/piroo.db
+backend/historico.json
+backend/uploads/
+backend/logs/
+*.log
+
+# Build local da interface (a versão publicada fica em backend/frontend-build)
+frontend/build/
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
