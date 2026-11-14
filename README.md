@@ -5,7 +5,7 @@ Módulo de Check-in Digital e Evidências no Gate · versão 2.3.0
 
 O PIROO-MVP digitaliza o atendimento de cargas no portão (gate) de unidades de recebimento de resíduos sólidos. Cada entrada gera um protocolo único, com evidência fotográfica, parecer automático de conformidade produzido por inteligência artificial (Google Gemini) e comprovante com QR Code. Os registros alimentam inventário, relatórios, alertas e indicadores operacionais, em substituição ao apontamento manual.
 
-O sistema é o produto técnico-tecnológico da dissertação *Projetos de Transformação Digital no Setor de Resíduos Sólidos*, do Programa de Pós-Graduação em Gestão de Projetos (PPGP) da Universidade Nove de Julho.
+O sistema constitui o produto técnico-tecnológico da dissertação de mestrado Projetos de Transformação Digital no Setor de Resíduos Sólidos, desenvolvida pela mestranda Daniela Correia Batista sob orientação do Prof. Dr. Edson Melo de Souza e coorientação da Profa. Dra. Cristina Dai Prá Martens, no Programa de Pós-Graduação em Gestão de Projetos (PPGP) da Universidade Nove de Julho (Uninove).
 
 ## Funcionalidades
 
@@ -76,7 +76,3 @@ A pasta `verificacao` reproduz a verificação descrita no relatório-piloto. O 
 - A autenticação ocorre apenas na interface; o servidor pressupõe rede interna confiável.
 - A interface compilada chama `http://localhost:3000/api`; o uso em outros dispositivos da rede exige recompilar o frontend com o endereço do servidor.
 - Não há troca de senha pela interface nem modo offline.
-
-## Autoria
-
-Daniela Correia Batista (mestranda/autora), Prof. Dr. Edson Melo de Souza (orientador) e Profa. Dra. Cristina Dai Prá Martens, Programa de Pós-Graduação em Gestão de Projetos, Universidade Nove de Julho - Uninove, 2026.
