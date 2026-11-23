@@ -79,7 +79,7 @@ A pasta `verificacao` reproduz a verificação descrita no relatório-piloto. O 
 
 ## Licença
 
-© 2026 Daniela Correia Batista, Edson Melo de Souza e Cristina Dai Prá Martens.
+© 2026 Daniela Correia Batista, Cristina Dai Prá Martens e Edson Melo de Souza.
 
 - Código-fonte (`backend/`, `frontend/` e `verificacao/`): licença MIT, conforme o arquivo [LICENSE](LICENSE).
 - Documentação, manual, vídeo de demonstração e relatório-piloto (`docs/`): Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0), conforme [docs/LICENSE.txt](docs/LICENSE.txt).
