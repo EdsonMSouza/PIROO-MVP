@@ -76,3 +76,10 @@ A pasta `verificacao` reproduz a verificação descrita no relatório-piloto. O 
 - A autenticação ocorre apenas na interface; o servidor pressupõe rede interna confiável.
 - A interface compilada chama `http://localhost:3000/api`; o uso em outros dispositivos da rede exige recompilar o frontend com o endereço do servidor.
 - Não há troca de senha pela interface nem modo offline.
+
+## Licença
+
+© 2026 Daniela Correia Batista, Edson Melo de Souza e Cristina Dai Prá Martens.
+
+- Código-fonte (`backend/`, `frontend/` e `verificacao/`): licença MIT, conforme o arquivo [LICENSE](LICENSE).
+- Documentação, manual, vídeo de demonstração e relatório-piloto (`docs/`): Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0), conforme [docs/LICENSE.txt](docs/LICENSE.txt).

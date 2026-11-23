@@ -1,6 +1,7 @@
 {
   "name": "piroo-mvp-backend",
   "version": "2.3.0",
+  "license": "MIT",
   "description": "PIROO — Plataforma Integrada de Rastreabilidade e Orquestração Operacional",
   "main": "index.js",
   "scripts": {
